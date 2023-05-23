@@ -7,28 +7,12 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         '@pinia-plugin-persistedstate/nuxt',
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/supabase',
-        '@element-plus/nuxt'
+        '@nuxtjs/supabase'
     ],
     runtimeConfig: {
         public: {
           stripePk: process.env.STRIPE_PK_KEY
         }
-    },
-    css: ['~/assets/scss/index.scss'],
-    vite: {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            additionalData: `@use "@/assets/scss/element/index.scss" as element;`,
-          },
-        },
-      },
-    },
-    elementPlus: {
-      icon: 'ElIcon',
-      importStyle: 'scss',
-      themes: ['dark'],
     },
     app: {
         head: {
